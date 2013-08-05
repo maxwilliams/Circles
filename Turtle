@@ -1,0 +1,56 @@
+from turtle import *
+import sys
+import time
+from zabbix_api import ZabbixAPI
+import ConfigParser
+
+config = ConfigParser.RawConfigParser()
+config.read("Turtle_Config")
+server = config.get("settings", "server")
+username = config.get("settings", "username")
+password = config.get("settings", "password")
+diagrams = config.get("settings", "diagrams")
+
+zapi = ZabbixAPI(server=server, path="", log_level=6)
+zapi.login(username, password)
+counter = 0
+
+while True:
+
+     for diagram in diagrams:
+        
+        counter=int(counter)+1
+        itemid = config.get(str(counter), "itemid")
+        centerX = config.get(str(counter), "circleX")
+        centerY = config.get(str(counter), "circleY")
+        textX = config.get(str(counter), "textX")
+        textY = config.get(str(counter), "textY")
+        title = config.get(str(counter), "title")
+        max = config.get(str(counter), "max")
+        
+        latestData = float(zapi.item.get({"output":"extend", "itemids":int(itemid)})[0]['lastvalue'])
+        pen(fillcolor=str("green"), pencolor=str("green"), pensize=15, shown=False, speed=0)
+        up()
+        setx(int(centerX))
+        sety(int(centerY))
+        down()
+        factor = (100 / float(max))
+        radius = (factor*latestData)
+        if((radius)>=90):
+             pen(fillcolor=str("red"), pencolor=str("red"))
+        fill(True)
+        circle(radius)
+        fill(False)
+        up()
+        setx(int(textX))
+        sety(int(textY))
+        down()
+        pen(pencolor("black"))
+        write(str(title), font=("arial", 11, "normal"))
+        up()
+        setx(0)
+        sety(0)
+        if((int(counter) % int(diagrams))==0):
+            time.sleep(60)
+            clear()
+            counter = 0
