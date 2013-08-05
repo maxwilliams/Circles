@@ -1,0 +1,111 @@
+[settings]
+#server address
+server = http://maxxdevzabbix.matrixdev.net/
+#server username
+username = API
+#server password
+password = pie314
+#Number of diagrams
+diagrams = 4
+
+#-------------------------------------------------
+[1]
+#diagram 1 - Item id number
+itemid = 18469
+#diagram 1 - maximum value
+max = 1.03
+#diagram 1 - title
+title = DevMaxxZabbix: Processor Load5
+#diagram 1 - X position of the circle (Leave as is)
+circleX = -250
+#diagram 1 - Y position of the circle (Leave as is)
+circleY = 170
+#diagram 1 - X position of the text(Note: To center title subtract 3.43*(The number of characters) from circle x)
+textX = -353
+#diagram 1 - y position of the text (Leave as is)
+textY = 143
+
+#-------------------------------------------------
+[2]
+#diagram 2 - Item id number
+itemid = 22409
+#diagram 2 - maximum value
+max = 0.70
+#diagram 2 - title
+title = Firewall: Processor Load5
+#diagram 2 - X position of the circle (Leave as is)
+circleX = 210
+#diagram 2 - Y position of the circle (Leave as is)
+circleY = 170
+#diagram 2 - X position of the text(Note: To center title subtract 3.43*(The number of characters) from circle x)
+textX = 124
+#diagram 2 - y position of the text (Leave as is)
+textY = 143
+
+#-------------------------------------------------
+[3]
+#diagram 3 - Item id number
+itemid = 22451
+#diagram 3 - maximum value
+max = 2.54
+#diagram 3 - title
+title = Linux4: processor load5
+#diagram 3 - x position of the circle (Leave as is)
+circlex = -250
+#diagram 3 - y position of the circle (Leave as is)
+circley = -80
+#diagram 3 - x position of the text(Note: To center title subtract 3.43*(The number of characters) from circle x)
+textx = -335
+#diagram 3 - y position of the text (Leave as is)
+texty = -107
+
+#-------------------------------------------------
+[4]
+#diagram 4 - Item id number
+itemid = 22553
+#diagram 4 - maximum value
+max = 3.78
+#diagram 4 - title
+title = MaxxDev1: Processor Load5
+#diagram 4 - X position of the circle (Leave as is)
+circleX = 210
+#diagram 4 - Y position of the circle (Leave as is)
+circleY = -80
+#diagram 4 - X position of the text(Note: To center title subtract 3.43*(The number of characters) from circle x)
+textX = 124
+#diagram 4 - y position of the text (Leave as is)
+textY = -107
+
+#-------------------------------------------------
+[5]
+#diagram 5 - Item id number
+itemid = 
+#diagram 5 - maximum value
+max = 
+#diagram 5 - title
+title = 
+#diagram 5 - X position of the circle (Leave as is)
+circleX = -250
+#diagram 5 - Y position of the circle (Leave as is)
+circleY = -320
+#diagram 5 - X position of the text(Note: To center title subtract 3.43*(The number of characters) from circle x)
+textX = -353
+#diagram 5 - y position of the text (Leave as is)
+textY = -347
+
+#-------------------------------------------------
+[6]
+#diagram 6 - Item id number
+itemid = 
+#diagram 6 - maximum value
+max = 
+#diagram 6 - title
+title = 
+#diagram 6 - X position of the circle (Leave as is)
+circleX = 210
+#diagram 6 - Y position of the circle (Leave as is)
+circleY = -320
+#diagram 6 - X position of the text(Note: To center title subtract 3.43*(The number of characters) from circle x)
+textX = 107
+#diagram 6 - y position of the text (Leave as is)
+textY = -347
